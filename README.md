@@ -1,6 +1,6 @@
 # Android-user-store
 Android mobile application to store users in an SQLite database. Users can login, register. 
-User can change own user details. Admin can list users, view user details, make admin from user, delete user, change own user details.
+User can change own user details, suspend account, log out. Admin can list users, view user details, make admin from user, delete user (only Passive/Suspended), change own user details, log out.
 
 Used tools:
  - Android Studio 1.3.1
