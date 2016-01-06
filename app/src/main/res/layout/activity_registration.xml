@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.jockay.view.RegistrationActivity"
+    style="@style/AppTheme">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Surname:"
+        android:id="@+id/twSurname"
+        android:gravity="right|center_horizontal"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/twFirstName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="First Name:"
+        android:id="@+id/twFirstName"
+        android:paddingTop="10dp"
+        android:gravity="center|right|center_horizontal"
+        android:layout_below="@+id/twSurname"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:onClick="onRegisterPressed"
+        android:id="@+id/btRegister"
+        android:gravity="center|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Birth Date:"
+        android:id="@+id/twBirthDate"
+        android:paddingTop="10dp"
+        android:gravity="center|right|center_horizontal"
+        android:layout_below="@+id/twFirstName"
+        android:layout_alignEnd="@+id/twFirstName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="User name:"
+        android:id="@+id/twUserName"
+        android:paddingTop="10dp"
+        android:gravity="center|right|center_horizontal"
+        android:layout_below="@+id/twBirthDate"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Password:"
+        android:id="@+id/twPassword"
+        android:paddingTop="10dp"
+        android:gravity="center|right|center_horizontal"
+        android:layout_below="@+id/twUserName"
+        android:layout_alignStart="@+id/twBirthDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pw again:"
+        android:id="@+id/twPasswordAgain"
+        android:paddingTop="10dp"
+        android:gravity="center|right|center_horizontal"
+        android:layout_below="@+id/twPassword"
+        android:layout_alignEnd="@+id/twPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="E-Mail:"
+        android:id="@+id/twEmail"
+        android:paddingTop="10dp"
+        android:gravity="center|right|center_horizontal"
+        android:layout_below="@+id/twPasswordAgain"
+        android:layout_alignEnd="@+id/twUserName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/twMessage"
+        android:gravity="center_vertical|center|center_horizontal"
+        android:textColor="#ff0e00"
+        android:layout_above="@+id/btRegister"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Registration"
+        android:id="@+id/textView"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@android:dimen/app_icon_size"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etSurname"
+        android:singleLine="true"
+        android:layout_above="@+id/twFirstName"
+        android:layout_alignEnd="@+id/twMessage"
+        android:layout_toEndOf="@+id/twSurname"
+        android:layout_alignStart="@+id/etFirstName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etFirstName"
+        android:singleLine="true"
+        android:layout_below="@+id/etSurname"
+        android:layout_alignEnd="@+id/twMessage"
+        android:layout_toEndOf="@+id/twPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etBirthDate"
+        android:singleLine="true"
+        android:hint="YYYY-MM-DD"
+        android:layout_below="@+id/twFirstName"
+        android:layout_alignStart="@+id/etUserName"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etUserName"
+        android:singleLine="true"
+        android:layout_below="@+id/etBirthDate"
+        android:layout_alignEnd="@+id/etFirstName"
+        android:layout_toEndOf="@+id/twPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:singleLine="true"
+        android:id="@+id/etPassword"
+        android:layout_below="@+id/twUserName"
+        android:layout_alignEnd="@+id/etUserName"
+        android:layout_toEndOf="@+id/twPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:singleLine="true"
+        android:id="@+id/etPasswordAgain"
+        android:layout_below="@+id/etPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/twPasswordAgain" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:singleLine="true"
+        android:id="@+id/etEmail"
+        android:hint="your@mail.address"
+        android:layout_below="@+id/twPasswordAgain"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/etPasswordAgain" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="State:"
+        android:id="@+id/twState"
+        android:layout_below="@+id/etEmail"
+        android:layout_alignEnd="@+id/twEmail"
+        android:paddingTop="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etState"
+        android:hint="A / P / D"
+        android:singleLine="true"
+        android:maxLength="1"
+        android:layout_below="@+id/etEmail"
+        android:layout_alignStart="@+id/etEmail"
+        android:layout_alignEnd="@+id/etEmail" />
+
+</RelativeLayout>
